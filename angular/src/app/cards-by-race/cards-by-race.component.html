@@ -1,0 +1,8 @@
+<div class="card-container background">
+  <div *ngFor="let card of cards" class="card">
+    <ng-container *ngIf="card.img">
+
+      <img [src]="card.img" alt="{{ card.name }}">
+    </ng-container>
+  </div>
+</div>

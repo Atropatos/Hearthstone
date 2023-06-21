@@ -1,0 +1,37 @@
+
+
+
+<div class="background">
+
+
+
+
+<div class="container" >
+  <div class="links">
+    <a class="router-link" routerLink="/">Back to MAIN PAGE</a>
+    <a class="router-link" routerLink="/myDeck">MyDeck</a>
+
+  </div>
+
+
+<ul ngbNav #nav="ngbNav" class="nav-tabs ">
+  <li ngbNavItem>
+    <button ngbNavLink >Cards by Type</button>
+    <ng-template ngbNavContent> <input [(ngModel)]="type" type="text">
+      <button class="btn btn-primary " (click)="updateType()" routerLink="/cardsByTypes">Search</button>
+      </ng-template>
+
+  </li>
+  <li ngbNavItem>
+    <button ngbNavLink>Cards by Race</button>
+    <ng-template ngbNavContent><input [(ngModel)]="race" type="text">
+      <button class="btn btn-primary " (click)="updateRace()" routerLink="/cardsByRace">Search</button>
+    </ng-template>
+
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
+
+<router-outlet></router-outlet>
+
+</div>

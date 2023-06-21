@@ -1,0 +1,11 @@
+
+<div class="card-container background">
+  <div *ngFor="let card of cards" class="card">
+    <ng-container *ngIf="card.img">
+    <!-- //  <h2>{{ card.name }}</h2>
+     // <p>Type: {{ card.type }}</p>
+     // <p>Health: {{ card.health }}</p> -->
+      <img [src]="card.img" alt="{{ card.name }}" (click)="addCardToDeck(card.name)" class="clickable-image">
+    </ng-container>
+  </div>
+</div>
